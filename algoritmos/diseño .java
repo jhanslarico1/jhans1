@@ -1,15 +1,42 @@
 import java.util.Scanner;
-public class suma_2_numeros {
-    public static void main(String[] args) {
-
-    double num1,num2,resultado;
-        Scanner in = new Scanner(System.in);      
-        System.out.print("Inserta el numero 1");
-        num1 = in.nextDouble();
+public class diseño{
+    static void operacionesEAMQ(){
+        Scanner in = new Scanner(System.in);
+        //definir variables
+        double n1, n2, opcion, resultado;
+        //datos de entrada
+        System.out.print("Ingresa el primer valor: ");
+        n1 = in.nextDouble();
+        in.nextLine();
+        System.out.print("Ingresa el segundo valor: ");
+        n2 = in.nextDouble();
+        in.nextLine();
+        System.out.print(" Elija el numero de la operación que desea realizar:                     ");
+        System.out.println ("\t1.-Sumar  ");
+        System.out.println ("\t2.- Restar");
+        System.out.println ("\t3.- Multiplicar");
+        System.out.println ("\t4.- Dividir");
+        System.out.println ("\t5.- Potencia");
+        System.out.print ("\t: ");
+        opcion = in.nextDouble();
+        in.nextLine();
+        resultado=0;
+        //proceso
+        if(opcion==1)
+            resultado=n1+n2;
+        if(opcion==2)
+            resultado=n1-n2;
+        if(opcion==3)
+            resultado=n1*n2;
+        if(opcion==4)
+            resultado=n1/n2; 
+         if(opcion==5)
+            resultado=Math.pow ( n1 , n2 ) ;
+        //datos de salida
+        System.out.println("El resultado de su operación es: " + resultado);
         
-        System.out.println("Inserta el numero 2");
-        num2 = in.nextDouble();
-        resultado=num1+num2;
-        System.out.println("el resultado es"+resultado);
     }
+       public static void main(String[] args) {
+       operacionesEAMQ();
+       }
 }
